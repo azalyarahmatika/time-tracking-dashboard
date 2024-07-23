@@ -6,8 +6,7 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/images/favicon-32x32.png" />
       </Head>
-      <body>
-        <Main />
+      <body className="h-screen w-screen bg-very_dark_blue flex justify-center items-center">
         <NextScript />
       </body>
     </Html>

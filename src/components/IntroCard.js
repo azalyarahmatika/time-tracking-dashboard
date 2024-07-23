@@ -19,7 +19,7 @@ function IntroCard({ timeFrame, setTimeFrame}) {
         </div>
         <div className='pt-10 pb-8'>
           <p className='text-sm text-pale_blue'>Report for</p>
-          <p className='text-3xl font-light py-1'>Jeremy Robson</p>
+          <p className='text-4xl tracking-wide font-light py-1'>Jeremy Robson</p>
         </div>
       </div>
       
@@ -28,7 +28,7 @@ function IntroCard({ timeFrame, setTimeFrame}) {
         <li>
           <a
             href="#"
-            className={timeFrame === 'daily' ? 'text-white' : 'text-desaturated_blue'}
+            className={timeFrame === 'daily' ? 'text-white' : 'text-desaturated_blue hover:text-white'}
             onClick={() => handleSelectionChange('daily')}
           >
             Daily
@@ -37,7 +37,7 @@ function IntroCard({ timeFrame, setTimeFrame}) {
         <li>
           <a
             href="#"
-            className={timeFrame === 'weekly' ? 'text-white' : 'text-desaturated_blue'}
+            className={timeFrame === 'weekly' ? 'text-white' : 'text-desaturated_blue hover:text-white'}
             onClick={() => handleSelectionChange('weekly')}
           >
             Weekly
@@ -46,7 +46,7 @@ function IntroCard({ timeFrame, setTimeFrame}) {
         <li>
           <a
             href="#"
-            className={timeFrame === 'monthly' ? 'text-white' : 'text-desaturated_blue'}
+            className={timeFrame === 'monthly' ? 'text-white' : 'text-desaturated_blue hover:text-white'}
             onClick={() => handleSelectionChange('monthly')}
           >
             Monthly

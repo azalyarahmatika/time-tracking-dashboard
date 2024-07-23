@@ -39,24 +39,14 @@ function Card({ timeFrame = 'monthly' }) {
     }
   }
   
-  function getColor(title) {
-    switch (title) {
-      case 'Work':
-        return 'orange';
-      case 'Play':
-        return 'soft_blue';
-      case 'Study':
-        return 'light_red';
-      case 'Exercise':
-        return 'lime_green';
-      case 'Social':
-        return 'violet';
-      case 'Self Care':
-        return 'soft_orange';
-      default:
-        return 'N/A';
-    }
-  }
+  const colorMap = {
+    'Work': 'orange',
+    'Play': 'soft_blue',
+    'Study': 'light_red',
+    'Exercise': 'lime_green',
+    'Social': 'violet',
+    'Self Care': 'soft_orange',
+  };
 
   const iconMap = {
     'Work': Work,
@@ -73,13 +63,13 @@ function Card({ timeFrame = 'monthly' }) {
         <p>Loading...</p>
       ) : (
         areas.map((area, index) => (
-          <div key={index} className={`w-60 pt-10 rounded-2xl relative bg-${getColor(area.title)}`}>
+          <div key={index} className={`w-60 pt-10 rounded-2xl relative bg-${colorMap[area.title]}`}>
             <Image
               src={iconMap[area.title]}
               alt={`${area.title} icon`}
               className="h-12 z-0 w-auto absolute right-4 top-0"
             />
-            <div className="w-60 p-6 bottom-0 absolute z-10 bg-dark_blue rounded-2xl text-white font-rubik">
+            <div className="w-60 p-6 bottom-0 absolute z-10 bg-dark_blue rounded-2xl text-white font-rubik hover:cursor-pointer hover:bg-[#21016c]">
               <div className="flex items-center justify-between">
                 <p className="text-lg">{area.title}</p>
                 <div>
