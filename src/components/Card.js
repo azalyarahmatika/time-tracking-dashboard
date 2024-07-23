@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import classNames from 'classnames';
 import Image from 'next/image';
 import ellipsis from '../../public/images/icon-ellipsis.svg';
 import Exercise from '../../public/images/icon-exercise.svg';
@@ -62,7 +63,7 @@ function Card({ timeFrame = 'monthly' }) {
         <p>Loading...</p>
       ) : (
         areas.map((area, index) => (
-          <div key={index} className={`lg:w-60 w-full h-60 lg:h-auto pt-10 rounded-2xl relative bg-${colorMap[area.title]}`}>
+          <div key={index} className={classNames('lg:w-60 w-full h-60 lg:h-auto pt-10 rounded-2xl relative', `bg-${colorMap[area.title]}`)}>
             <Image
               src={iconMap[area.title]}
               alt={`${area.title} icon`}

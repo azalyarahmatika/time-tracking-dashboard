@@ -23,12 +23,15 @@ module.exports = {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
       },
-      screens: {
-        'tablet': '640px',
-        'laptop': '1024px',  
-        'desktop': '1280px',
-      },
     },
   },
+  safelist: [
+    'bg-orange',
+    'bg-soft_blue',
+    'bg-light_red',
+    'bg-lime_green',
+    'bg-violet',
+    'bg-soft_orange',
+  ],
   plugins: [],
 };
