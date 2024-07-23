@@ -11,7 +11,6 @@ import Work from '../../public/images/icon-work.svg';
 function Card({ timeFrame = 'monthly' }) {
   const [areas, setArea] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(timeFrame)
 
   useEffect(() => {
     fetch('/data.json')
@@ -58,18 +57,18 @@ function Card({ timeFrame = 'monthly' }) {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid lg:grid-cols-3 gap-4">
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         areas.map((area, index) => (
-          <div key={index} className={`w-60 pt-10 rounded-2xl relative bg-${colorMap[area.title]}`}>
+          <div key={index} className={`lg:w-60 w-full h-60 lg:h-auto pt-10 rounded-2xl relative bg-${colorMap[area.title]}`}>
             <Image
               src={iconMap[area.title]}
               alt={`${area.title} icon`}
-              className="h-12 z-0 w-auto absolute right-4 top-0"
+              className="h-14 z-0 w-auto absolute right-4 top-0"
             />
-            <div className="w-60 p-6 bottom-0 absolute z-10 bg-dark_blue rounded-2xl text-white font-rubik hover:cursor-pointer hover:bg-[#21016c]">
+            <div className="lg:w-60 w-full p-6 bottom-0 absolute z-10 bg-dark_blue rounded-2xl text-white font-rubik hover:cursor-pointer hover:bg-[#21016c]">
               <div className="flex items-center justify-between">
                 <p className="text-lg">{area.title}</p>
                 <div>

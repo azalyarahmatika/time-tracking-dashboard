@@ -2,14 +2,13 @@ import Image from 'next/image';
 import Jeremy from '../../public/images/image-jeremy.png';
 
 function IntroCard({ timeFrame, setTimeFrame}) {
-  console.log(`timeframe intro: ${timeFrame}`)
   const handleSelectionChange = (timeFrame) => {
     setTimeFrame(timeFrame);
   };
   
   return (
-    <div className="w-60 bg-dark_blue font-rubik rounded-2xl">
-      <div className='w-60 p-6 text-white bg-blue rounded-2xl flex flex-col '>
+    <div className="lg:w-60 w-full bg-dark_blue font-rubik rounded-2xl lg:mb-0">
+      <div className='lg:w-60 w-full p-6 text-white bg-blue rounded-2xl flex gap-4 lg:gap-0 lg:flex-col '>
         <div className='w-20'>
           <Image 
             src={Jeremy}
@@ -17,14 +16,13 @@ function IntroCard({ timeFrame, setTimeFrame}) {
             className='rounded-full border-2 border-white'
           />
         </div>
-        <div className='pt-10 pb-8'>
+        <div className='lg:pt-10 lg:pb-8'>
           <p className='text-sm text-pale_blue'>Report for</p>
           <p className='text-4xl tracking-wide font-light py-1'>Jeremy Robson</p>
         </div>
       </div>
-      
-
-      <ul className="space-y-4 p-8">
+    
+      <ul className="lg:space-y-4 p-8 flex gap-10 justify-between lg:block">
         <li>
           <a
             href="#"
